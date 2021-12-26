@@ -11,14 +11,17 @@
 
     <div id="inputField1">
         <p>Input dates in UNIX format :) </p>
-        <input type="text" id="startDate">
-        <input type="text" id="endDate">
-        <button type="button" onclick="search()">Go</button>
+        <label for="startDate">Start date</label><input type="text" id="startDate" value="1577836800"/>
+        <label for="endDate">End date</label><input type="text" id="endDate" value="1609376400"/>
+        <button type="button" onclick="searchLDS()">Find longest bearish trend</button>
     </div>
 
-    <script src="config.js"></script>
-    <script src="bitcoinTrends.js"></script>
+    <div id="lds"></div>
 
+
+    <script src="config.js"></script>
+    <script src="longestDownwardTrend.js"></script>
+    <script src="bitcoinTrends.js"></script>
 
 </body>
 </html>

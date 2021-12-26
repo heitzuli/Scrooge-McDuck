@@ -17,6 +17,8 @@ function search() {
     const found = getJSON(config.baseURL + `?vs_currency=eur&from=${startDate}&to=${endDate}`);
     console.log(found);
 
+    //console.log(Math.max());
+
     /*const searchTerm = document.getElementById('search').value;
     const foundIt = smileys.hasOwnProperty(searchTerm);
     if (foundIt) {

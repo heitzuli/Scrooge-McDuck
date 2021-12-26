@@ -3,3 +3,7 @@
  Trend data fetched from https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range
 
  Vincit application project.
+
+# Tests
+
+To run tests, open tests.html

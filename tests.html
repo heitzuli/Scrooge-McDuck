@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="testResults"></div>
+
+<script src="longestDownwardTrend.js"></script>
+<script>
+    function test(name, expectedResult, actualResult) {
+        if (expectedResult === actualResult) {
+            document.getElementById("testResults").innerHTML =
+                document.getElementById("testResults").innerHTML
+                    + `<div>${name}</div><div style="color:green">Pass</div>`;
+        } else {
+            document.getElementById("testResults").innerHTML =
+                document.getElementById("testResults").innerHTML
+                    + `<div>${name}</div><div style="color:red">Fail: expected ${expectedResult}, got ${actualResult} </div>`;
+        }
+    }
+
+    // case 1: trend of 4
+    {
+        const array = [1, 2, 7, 4, 3, 2, 9]
+        const expectedResult = 4;
+        const actualResult = lengthOfLongestDownwardTrend(array);
+        test('test1', expectedResult, actualResult);
+    }
+    // case 2: no downward trend
+    {
+        const array = [1, 2, 7, 9, 12, 14, 17]
+        const expectedResult = 1;
+        const actualResult = lengthOfLongestDownwardTrend(array);
+        test('test2', expectedResult, actualResult);
+    }
+    // case 3: two downward trends, one of 2 and one of 3
+    {
+        const array = [1, 2, 7, 6, 12, 14, 17, 16, 15]
+        const expectedResult = 3;
+        const actualResult = lengthOfLongestDownwardTrend(array);
+        test('test3', expectedResult, actualResult);
+    }
+</script>
+</body>
+</html>

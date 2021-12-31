@@ -3,7 +3,7 @@ function lengthOfLongestDownwardTrend(array) {
 }
 
 /*
-The function returns the longest sub-sequense that's decreasing, aka the time-frame of longest
+The function returns the longest sub-sequence that's decreasing, aka the time-frame of longest
 low bitcoin prices.
 Inspiration and help gotten from https://www.geeksforgeeks.org/longest-decreasing-subsequence/
  */
@@ -13,10 +13,7 @@ function lds(arr)
     const n = arr.length
     const lds = new Array(n);
     let max = 0;
-/*
-The LDS is always initialized with a 1.
- */
-
+    // initialize the loop to always begin at place one
     for (let i = 0; i < n; i++) {
         lds[i] = 1;
     }

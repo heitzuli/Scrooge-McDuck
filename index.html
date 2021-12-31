@@ -11,10 +11,16 @@
 
     <div id="inputField1">
         <p>Input dates in UNIX format :) </p>
-        <label for="startDate">Start date</label><input type="text" id="startDate" value="1577836800"/>
-        <label for="endDate">End date</label><input type="text" id="endDate" value="1609376400"/>
-        <button type="button" onclick="searchLDS()">Find longest bearish trend</button>
-        <button type="button" onclick="searchVolume()">Find the biggest volume</button>
+        <div>
+            <label for="startDate">Start date</label><input type="text" id="startDate" placeholder="1577836800"/>
+        </div>
+        <div>
+            <label for="endDate">End date</label><input type="text" id="endDate" placeholder="1609376400"/>
+        </div>
+        <div>
+            <button type="button" onclick="searchLDS()">Find longest bearish trend</button>
+            <button type="button" onclick="searchVolume()">Find the biggest volume</button>
+        </div>
     </div>
 
     <div id="lds"></div>
